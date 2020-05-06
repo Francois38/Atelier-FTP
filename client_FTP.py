@@ -32,20 +32,20 @@ while True :
 	if choix == 1: 
 		ftp.retrlines('LIST', callback=None) 
 	elif choix == 2:
-		nom_rép = input("Nommer le dossier à créer (rép courant): ")
+		nom_rép = str(input("Nommer le dossier à créer (rép courant): "))
 		ftp.mkd(nom_rép)
 	elif choix == 3:
-		nom_fic = input("Indiquer le nom du fichier à supprimer: ")
+		nom_fic = str(input("Indiquer le nom du fichier à supprimer: "))
 		ftp.delete(nom_fic)
 	elif choix == 4:
-		nom_rép = input("Indiquer le nom du dossier à supprimer: ")
+		nom_rép = str(input("Indiquer le nom du dossier à supprimer: "))
 		ftp.rmd(nom_rép)
 	elif choix == 5:
-		nom_fic = input("Indiquer le nom du fichier à renommer: ")
-		nom_fic_new = input("Indiquer le nom du fichier à renommer: ")
+		nom_fic = str(input("Indiquer le nom du fichier à renommer: "))
+		nom_fic_new = str(input("Indiquer le nom du fichier à renommer: "))
 		ftp.rename(nom_fic, nom_fic_new)
 	elif choix == 6:
-		nom_fic = input("Indiquer le nom du fichier à transférer: ")
+		nom_fic = str(input("Indiquer le nom du fichier à transférer: "))
 		ftp.storbinary('STOR', nom_fic, blocksize=8192, callback=None, rest=None)
 	elif choix == 7:
 		ftp.quit()
