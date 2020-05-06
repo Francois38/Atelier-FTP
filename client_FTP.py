@@ -46,12 +46,11 @@ while True :
 		ftp.rename(nom_fic, nom_fic_new)
 	elif choix == 6:
 		nom_fic = input("Indiquer le nom du fichier à transférer: ")
-		ftp.storbinary('STOR', "ficEnvoie.txt", blocksize=8192, callback=None, rest=None)
+		ftp.storbinary('STOR', nom_fic, blocksize=8192, callback=None, rest=None)
 	elif choix == 7:
 		ftp.quit()
 
 
-	
 # On se place dans ce répertoire
 ftp.cwd(repertoire)
 
