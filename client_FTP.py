@@ -25,8 +25,8 @@ repertoire = input("Dans quel répertoire voulez vous aller ?: ")
 ftp.cwd(repertoire)	
 
 while True :
-	print("Voici les différentes options :\n 1 : Lister les fichiers du répertoire\n 2 : Créer un répertoire\n 3 : Supprimer un fichier\n")
-	print("4 : Supprimer un dossier\n 5 : Renommer un fichier \n 6 : Transférer un fichier \n 7 : Quitter le serveur FTP")
+	print("Voici les différentes options :\n 1 : Lister les fichiers du répertoire\n 2 : Créer un répertoire\n 3 : Supprimer un fichier")
+	print(" 4 : Supprimer un dossier\n 5 : Renommer un fichier \n 6 : Transférer un fichier \n 7 : Quitter le serveur FTP")
 	choix = int(input("Quel choix faites vous (1/2/3/4/5/6/7) ?"))
 
 	if choix == 1: 
